@@ -39,7 +39,6 @@
     "tailwindcss": "^4.1.14",
     "vite": "^7.1.7"
   },
-  "main": "main.js",
   "build": {
     "appId": "com.arina.calculator",
     "files": [
@@ -47,12 +46,17 @@
       "main.js",
       "package.json"
     ],
+    "asar": false,
+    "forceCodeSigning": false,
     "win": {
       "target": [
         "portable"
       ]
     },
-    "asar": false,
-    "forceCodeSigning": false
+    "publish": null,
+    "electronDownload": {
+      "mirror": null
+    },
+    "npmRebuild": false
   }
 }
