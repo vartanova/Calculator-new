@@ -1,11 +1,11 @@
-import type { BinaryOp, UnaryOp, SpecialFn } from "../types/types";
+import type { BinaryOp, UnaryOp, SpecialFn } from "../types";
 import {
   ADDITIONAL_FUNCTIONS_A,
   BASIC_OPERATIONS,
   EXTRA_BINARY_OPERATIONS,
   STANDART_FUNCTIONS_A,
 } from "../lib/const";
-import { CalcButton } from "../shared/ui/CalcButton";
+import { CalcButton } from "../shared";
 
 interface ButtonGridProps {
   onBinary: (op: BinaryOp) => void;

@@ -1,4 +1,5 @@
-import type { BinaryOp, CalcResult } from "../types/types";
+import type { BinaryOp, CalcResult } from "../types";
+
 export function applyBinaryOp(op: BinaryOp, a: number, b: number): CalcResult {
   let value: number;
 

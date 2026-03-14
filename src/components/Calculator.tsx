@@ -3,7 +3,7 @@ import { InputRow } from "./InputRow";
 import { ResultDisplay } from "./ResultDisplay";
 import { ButtonGrid } from "./ButtonGrid";
 import { HistoryPanel } from "./HistoryPanel";
-import { CalcButton } from "../shared/ui/CalcButton";
+import { CalcButton } from "../shared";
 
 export const Calculator = () => {
   const {

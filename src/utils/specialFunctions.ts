@@ -1,4 +1,4 @@
-import type { CalcResult } from "../types/types";
+import type { CalcResult } from "../types";
 export function calcFx(x: number): CalcResult {
   if (Math.abs(x - 1) < 1e-14) {
     return { ok: false, error: "F(x): x ≠ 1 (деление на ноль)" };

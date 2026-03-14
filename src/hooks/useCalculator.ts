@@ -1,10 +1,7 @@
 import { useState, useCallback } from 'react';
-import type { BinaryOp, UnaryOp, SpecialFn } from '../types/types';
-import { parseVal, formatResult } from '../utils/parser';
-import { applyBinaryOp, binaryLabel } from '../utils/operations';
-import { calcFx, fxLabel, calcF2, f2Label } from '../utils/specialFunctions';
+import type { BinaryOp, UnaryOp, SpecialFn } from '../types';
 import { useHistory } from './useHistory';
-import { applyUnaryOp, unaryLabel } from '../utils/MathFunctions';
+import { applyBinaryOp, applyUnaryOp, binaryLabel, calcF2, calcFx, f2Label, formatResult, fxLabel, parseVal, unaryLabel } from '../utils';
 
 export type ResultState =
   | { status: 'idle' }

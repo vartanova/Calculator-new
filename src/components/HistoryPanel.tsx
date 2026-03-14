@@ -1,4 +1,4 @@
-import type { HistoryEntry } from "../types/types";
+import type { HistoryEntry } from "../types";
 
 interface HistoryPanelProps {
   entries: HistoryEntry[];

@@ -1,9 +1,9 @@
-import type { UnaryOp, CalcResult } from "../types/types";
+import type { CalcResult, UnaryOp } from "../types";
 
-export function applyUnaryOp(op: UnaryOp, a: number): CalcResult {
+export function applyUnaryOp(option: UnaryOp, a: number): CalcResult {
   let value: number;
 
-  switch (op) {
+  switch (option) {
     case "round":
       value = Math.round(a);
       break;
@@ -112,7 +112,7 @@ export function applyUnaryOp(op: UnaryOp, a: number): CalcResult {
   return { ok: true, value };
 }
 
-export function unaryLabel(op: UnaryOp, a: number): string {
+export function unaryLabel(option: UnaryOp, a: number): string {
   const labels: Record<UnaryOp, string> = {
     round: `Round(${a})`,
     trunc: `Trunc(${a})`,
@@ -136,5 +136,5 @@ export function unaryLabel(op: UnaryOp, a: number): string {
     sign: `sign(${a})`,
     pi: `π`,
   };
-  return labels[op] ?? op;
+  return labels[option] ?? option;
 }

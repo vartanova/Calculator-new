@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
-import type { HistoryEntry } from '../types/types';
 import { MAX_ENTRIES, STORAGE_KEY } from '../lib/const';
+import type { HistoryEntry } from '../types';
 
 function loadHistory(): HistoryEntry[] {
   try {

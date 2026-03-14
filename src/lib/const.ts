@@ -1,5 +1,5 @@
 import type { BtnDef } from "../components/ButtonGrid";
-import type { BinaryOp, UnaryOp } from "../types/types";
+import type { BinaryOp, UnaryOp } from "../types";
 
 export const BASIC_OPERATIONS: BtnDef<BinaryOp>[] = [
   { label: "A + B", value: "+" },
