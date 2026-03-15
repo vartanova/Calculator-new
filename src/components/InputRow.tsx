@@ -11,6 +11,20 @@ export const InputRow = ({
   onChangeA,
   onChangeB,
 }: InputRowProps) => {
+  const numberRegex = /^-?\d*\.?\d*$/;
+
+  const handleChangeA = (value: string) => {
+    if (numberRegex.test(value)) {
+      onChangeA(value);
+    }
+  };
+
+  const handleChangeB = (value: string) => {
+    if (numberRegex.test(value)) {
+      onChangeB(value);
+    }
+  };
+
   return (
     <div className="grid grid-cols-2 gap-4">
       <div className="flex flex-col gap-1">
@@ -21,7 +35,7 @@ export const InputRow = ({
           id="input-a"
           type="text"
           value={inputA}
-          onChange={(e) => onChangeA(e.target.value)}
+          onChange={(e) => handleChangeA(e.target.value)}
           placeholder="напр. 3.14"
           className="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
@@ -35,7 +49,7 @@ export const InputRow = ({
           id="input-b"
           type="text"
           value={inputB}
-          onChange={(e) => onChangeB(e.target.value)}
+          onChange={(e) => handleChangeB(e.target.value)}
           placeholder="напр. 2"
           className="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
